@@ -1,101 +1,74 @@
+import ListCard from "@/components/ListCard";
+import Separator from "@/components/Separator";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <main className=" flex px-4 py-6  mb-16 flex-col gap-16 2xl:flex-row xl:mx-40 md:mx-14 2xl:justify-between  ">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 xl:min-w-[1110px] 2xl:max-w-[1110px]      ">
+        <div className="flex flex-col gap-8 lg:col-span-2 lg:max-w-[45.625rem]">
+          <div className="relative min-w-[18.75rem] h-[18.75rem] ">
             <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={"/image-web-3-desktop.jpg"}
+              alt="Illustration"
+              fill
+              className="object-cover"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+
+          <div className="flex flex-col gap-4 lg:flex-row ">
+            <h1 className="text-4xl font-bold text-veryDarkBlue ">
+              The Bright Future of Web 3.0?
+            </h1>
+
+            <div className="flex flex-col gap-4 ">
+              <p className="text-[0.938rem] leading-8 text-darkGrayishBlue">
+                We dive into the next evolution of web that claims to put the
+                power of the platforms back into the hands of the people. But is
+                it really fulfilling its promise?
+              </p>
+
+              <button className="h-[3.125rem] cursor-pointer w-[11.563rem] font-bold flex items-center justify-center hover:bg-veryDarkBlue hover:text-offWhite transition-all ease-in-out duration-300 bg-softRed text-veryDarkBlue">
+                READ MORE
+              </button>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="py-6 px-5 bg-veryDarkBlue min-w-[350px]  ">
+          <h2 className="text-3xl font-bold text-softOrange pb-8">New</h2>
+
+          <h3 className="text-[1.25rem] cursor-pointer  hover:text-softOrange transition-all ease-in-out duration-300  pb-5 font-bold text-offWhite">
+            Hydrogen VS Electric Cars
+          </h3>
+          <p className="text-[0.938rem] text-grayishBlue">
+            Will hydrogen-fueled cars ever catch up to EVs?
+          </p>
+
+          <Separator />
+
+          <h3 className="text-[1.25rem] cursor-pointer   hover:text-softOrange transition-all ease-in-out duration-300 pb-5 font-bold text-offWhite">
+            {" "}
+            The Downsides of AI Artistry
+          </h3>
+          <p className="text-[0.938rem] text-grayishBlue">
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+
+          <Separator />
+
+          <h3 className="text-[1.25rem] cursor-pointer  hover:text-softOrange transition-all ease-in-out duration-300 pb-5 font-bold text-offWhite">
+            Is VC Funding Drying Up?
+          </h3>
+          <p className="text-[0.938rem] text-grayishBlue">
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </div>
+      </div>
+
+      <ListCard />
+    </main>
   );
 }
